@@ -8,8 +8,8 @@ const pretendardFont = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'QR 코드 생성기',
-  description: '쉽게 QR 코드를 생성하고 다운로드할 수 있는 웹사이트'
+  title: '윤지원 이력서',
+  description: '소프트웨어 엔지니어 윤지원 입니다.'
 }
 
 export default function RootLayout({

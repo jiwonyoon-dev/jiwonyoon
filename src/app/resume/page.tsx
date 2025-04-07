@@ -136,7 +136,7 @@ export default function ResumePage() {
               </span>
               <h5>주요 업무</h5>
               <ul>
-                <li>Next.js, TypeScript 기반 Neubie-Go 플랫폼 프론트엔드 개발 참여</li>
+                <li>Next.js, TypeScript 기반 Neubie-Go 플랫폼 프론트엔드 개발</li>
                 <li>회원 관리 및 무선 충전기 관리 등 주요 기능 UI 및 로직 구현</li>
                 <li>React Query 활용 서버 상태 관리 및 react-hook-form 기반 폼 개발</li>
                 <li>애자일(스프린트) 환경 내 개발, 코드 리뷰, 회고 참여</li>
@@ -152,11 +152,10 @@ export default function ResumePage() {
 
               <h5>주요 업무</h5>
               <ul>
-                <li>Next.js, TypeScript 기반 Neubie-Go 플랫폼 프론트엔드 개발 참여</li>
-                <li>회원 관리 및 무선 충전기 관리 등 주요 기능 UI 및 로직 구현</li>
-                <li>React Query 활용 서버 상태 관리 및 react-hook-form 기반 폼 개발</li>
-                <li>애자일(스프린트) 환경 내 개발, 코드 리뷰, 회고 참여</li>
-                <li>PO, 디자이너, 백엔드 개발자와 협업하여 기능 개선 및 요구사항 반영</li>
+                <li>Neubie-Go 플랫폼 프론트엔드 기능 고도화 및 안정화 기여</li>
+                <li>사용자 피드백 및 기획 변경에 따른 신규 기능 개발 및 기존 기능 유지보수</li>
+                <li>코드 리뷰, 리팩토링 등을 통한 코드 품질 개선 및 성능 최적화 작업 참여</li>
+                <li>차세대 개발 환경 구축을 위한 Nx 모노레포 환경 구성 학습 및 팀 내 기술 공유/스터디 참여</li>
               </ul>
             </div>
           </div>

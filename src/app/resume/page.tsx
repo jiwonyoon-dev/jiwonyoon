@@ -34,7 +34,7 @@ export default function ResumePage() {
   return (
     <div className="container">
       <section>
-        <h2>문제를 찾아 기술로 해결하는, 주도적인 프론트엔드 개발자 윤지원 입니다.</h2>
+        <h2>문제를 찾아 기술로 해결하는, <br/>주도적인 개발자 윤지원 입니다.</h2>
         <p>
           주도적인 문제 해결 능력과 Full-stack 개발 경험(Node.js, React)을 갖춘 프론트엔드 개발자입니다. 자율주행 로봇
           회사에서 현장 운영 비효율 개선을 위해 '딸깍이' 툴을 직접 개발하여 사내 공식 플랫폼으로 채택되는 성과를
@@ -71,23 +71,13 @@ export default function ResumePage() {
             level={2}
             description="회사 프로젝트 참여 기간 중 Next.js 기반의 회사 프로젝트에 참여하여 페이지 기반 라우팅 환경에서 회원 관리 등 실제 서비스 기능 개발 경험이 있습니다."
           />
-          {/*<SkillItem*/}
-          {/*  skill="react-query"*/}
-          {/*  level={2}*/}
-          {/*  description="회사 실무 프로젝트(Next.js 기반)에서 서버 상태 관리 라이브러리로 사용하여 기본적인 데이터 Fetching 및 Caching 개념을 이해하고 적용해 보았습니다."*/}
-          {/*/>*/}
-          {/*<SkillItem*/}
-          {/*  skill="react-hook-form"*/}
-          {/*  level={2}*/}
-          {/*  description="회사 프로젝트 참여 기간 중 회사 프로젝트 내 회원 관리 등 폼(Form) 기능 구현 시 사용하여, 입력값 관리 및 유효성 검사(Validation) 처리 경험이 있습니다."*/}
-          {/*/>*/}
         </div>
       </section>
       <section>
         <h2>경력 사항</h2>
         <div className="row">
           <div className="row-left">
-            <h3>NEUBILITY</h3>
+            <h3>뉴빌리티</h3>
             <span>
               <time dateTime="2023-06">2023. 06.</time> - 현재
             </span>
@@ -124,7 +114,7 @@ export default function ResumePage() {
             </div>
 
             <div className="project">
-              <h4>업무 효율 개선 도구 개발 및 Site Operations Manager 역할 수행</h4>
+              <h4>로봇 서비스 운영 매니저</h4>
               <span className="time">
                 <time dateTime="2023-12">2023. 12.</time> - <time dateTime="2024-07">2024. 07.</time> (8개월)
               </span>
@@ -140,7 +130,7 @@ export default function ResumePage() {
             </div>
 
             <div className="project">
-              <h4>초기 로봇 모니터링 및 운영 지원</h4>
+              <h4>로봇 서비스 운영 지원</h4>
               <span className="time">
                 <time dateTime="2023-06">2023. 06.</time> - <time dateTime="2023-11">2023. 11.</time> (6개월)
               </span>

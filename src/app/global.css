@@ -126,7 +126,7 @@ ul > li:before {
 }
 
 .row-left {
-  flex-basis: 18rem;
+  flex-basis: 13rem;
   padding-right: 1rem;
   flex-shrink: 0;
 }

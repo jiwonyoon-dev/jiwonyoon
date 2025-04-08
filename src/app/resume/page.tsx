@@ -34,12 +34,23 @@ export default function ResumePage() {
   return (
     <div className="container">
       <section>
-        <h1>프론트엔드 개발자 윤지원 이력서</h1>
+        <h2>문제를 찾아 기술로 해결하는, 주도적인 프론트엔드 개발자 윤지원 입니다.</h2>
+        <p>
+          주도적인 문제 해결 능력과 Full-stack 개발 경험(Node.js, React)을 갖춘 프론트엔드 개발자입니다. 자율주행 로봇
+          회사에서 현장 운영 비효율 개선을 위해 '딸깍이' 툴을 직접 개발하여 사내 공식 플랫폼으로 채택되는 성과를
+          만들었으며, 애자일 환경에서의 실무 프로젝트 참여를 통해 협업과 개발 역량을 키웠습니다. 사용자 경험 개선에
+          기여하며 함께 성장하는 개발자가 되겠습니다.
+        </p>
+        <p>저의 협업 능력과 성과에 대한 동료들의 긍정적인 평가는 LinkedIn 프로필에서 확인하실 수 있습니다.</p>
       </section>
       <section>
-        <h2>기술 스택 및 역량 (Skills)</h2>
         <div className="section-divider">
           <h3>프론트엔드 핵심 (Core Front-end)</h3>
+          <SkillItem
+            skill="Problem Solving"
+            level={4}
+            description="현장 업무의 비효율성을 스스로 발견하고 '딸깍이'라는 기술적 솔루션을 기획부터 구현, 개선까지 주도하여 팀 전체의 생산성을 향상시키고 사내 공식 플랫폼으로 채택되는 성과를 이끌어냈습니다. (6,000+ 이슈 관리, 업무 시간 단축 기여)"
+          />
           <SkillItem
             skill="JavaScript"
             level={3}
@@ -60,34 +71,16 @@ export default function ResumePage() {
             level={2}
             description="회사 프로젝트 참여 기간 중 Next.js 기반의 회사 프로젝트에 참여하여 페이지 기반 라우팅 환경에서 회원 관리 등 실제 서비스 기능 개발 경험이 있습니다."
           />
-          <SkillItem
-            skill="react-query"
-            level={2}
-            description="회사 실무 프로젝트(Next.js 기반)에서 서버 상태 관리 라이브러리로 사용하여 기본적인 데이터 Fetching 및 Caching 개념을 이해하고 적용해 보았습니다."
-          />
-          <SkillItem
-            skill="react-hook-form"
-            level={2}
-            description="회사 프로젝트 참여 기간 중 회사 프로젝트 내 회원 관리 등 폼(Form) 기능 구현 시 사용하여, 입력값 관리 및 유효성 검사(Validation) 처리 경험이 있습니다."
-          />
-        </div>
-        <div className="section-divider">
-          <h3>개발 도구 및 역량 (Dev Tools & Competencies)</h3>
-          <SkillItem
-            skill="Problem Solving"
-            level={4}
-            description="현장 업무의 비효율성을 스스로 발견하고 '딸깍이'라는 기술적 솔루션을 기획부터 구현, 개선까지 주도하여 팀 전체의 생산성을 향상시키고 사내 공식 플랫폼으로 채택되는 성과를 이끌어냈습니다. (6,000+ 이슈 관리, 업무 시간 단축 기여)"
-          />
-          <SkillItem
-            skill="Git/GitHub"
-            level={3}
-            description="회사 프로젝트 등 모든 개인/팀 프로젝트 진행 시 버전 관리 및 협업을 위해 필수적으로 사용했습니다."
-          />
-          <SkillItem
-            skill="Agile Methodologies"
-            level={2}
-            description="프론트엔드 개발 참여 기간 중 스프린트 계획, 데일리 스탠드업, 회고 등 애자일 개발 프로세스를 직접 경험하고 참여했습니다."
-          />
+          {/*<SkillItem*/}
+          {/*  skill="react-query"*/}
+          {/*  level={2}*/}
+          {/*  description="회사 실무 프로젝트(Next.js 기반)에서 서버 상태 관리 라이브러리로 사용하여 기본적인 데이터 Fetching 및 Caching 개념을 이해하고 적용해 보았습니다."*/}
+          {/*/>*/}
+          {/*<SkillItem*/}
+          {/*  skill="react-hook-form"*/}
+          {/*  level={2}*/}
+          {/*  description="회사 프로젝트 참여 기간 중 회사 프로젝트 내 회원 관리 등 폼(Form) 기능 구현 시 사용하여, 입력값 관리 및 유효성 검사(Validation) 처리 경험이 있습니다."*/}
+          {/*/>*/}
         </div>
       </section>
       <section>
@@ -101,30 +94,17 @@ export default function ResumePage() {
           </div>
           <div className="row-right">
             <div className="project">
-              <h4>초기 로봇 모니터링 및 운영 지원</h4>
+              <h4>Platform Core Frontend</h4>
               <span className="time">
-                <time dateTime="2023-06">2023. 06.</time> - <time dateTime="2023-11">2023. 11.</time> (6개월)
+                <time dateTime="2025-03">2025. 03.</time> - 현재
               </span>
+
               <h5>주요 업무</h5>
               <ul>
-                <li>자율주행 로봇 실시간 모니터링 및 필요시 원격 제어</li>
-                <li>운영 중 발생하는 이슈 리포팅 및 데이터 기록</li>
-                <li>현장 운영 경험 축적 및 서비스 개선점 파악</li>
-              </ul>
-            </div>
-            <div className="project">
-              <h4>업무 효율 개선 도구 개발 및 Site Operations Manager 역할 수행</h4>
-              <span className="time">
-                <time dateTime="2023-12">2023. 12.</time> - <time dateTime="2024-07">2024. 07.</time> (8개월)
-              </span>
-              <h5>주요 업무 및 성과</h5>
-              <ul>
-                <li>수동 리포팅 비효율 개선 위해 '딸깍이' 기획 및 Full-stack 개발 주도 (React, Node.js 등)</li>
-                <li>'딸깍이' 적용 통한 팀 생산성 증대 및 6,000건+ 이슈 데이터 체계화 (사내 공식 플랫폼 채택)</li>
-                <li>원격 게임패드 기반 경로 취득 기능 구현 (업무 시간 1/3 단축)</li>
-                <li>로봇 서비스 현장 셋업, 경로 취득, 테스트, 사용자 교육 등 SOM 역할 수행</li>
-                <li>다양한 기술팀(엔지니어링, 자율주행, 플랫폼)과의 협업 경험 및 커뮤니케이션 역량 강화</li>
-                <li>(프론트엔드 개발 직무로 전환)</li>
+                <li>Neubie-Go 플랫폼 프론트엔드 기능 고도화 및 안정화 기여</li>
+                <li>사용자 피드백 및 기획 변경에 따른 신규 기능 개발 및 기존 기능 유지보수</li>
+                <li>코드 리뷰, 리팩토링 등을 통한 코드 품질 개선 및 성능 최적화 작업 참여</li>
+                <li>차세대 개발 환경 구축을 위한 Nx 모노레포 환경 구성 학습 및 팀 내 기술 공유/스터디 참여</li>
               </ul>
             </div>
 
@@ -144,17 +124,31 @@ export default function ResumePage() {
             </div>
 
             <div className="project">
-              <h4>Platform Core Frontend</h4>
+              <h4>업무 효율 개선 도구 개발 및 Site Operations Manager 역할 수행</h4>
               <span className="time">
-                <time dateTime="2025-03">2025. 03.</time> - 현재
+                <time dateTime="2023-12">2023. 12.</time> - <time dateTime="2024-07">2024. 07.</time> (8개월)
               </span>
+              <h5>주요 업무 및 성과</h5>
+              <ul>
+                <li>수동 리포팅 비효율 개선 위해 '딸깍이' 기획 및 Full-stack 개발 주도 (React, Node.js 등)</li>
+                <li>'딸깍이' 적용 통한 팀 생산성 증대 및 6,000건+ 이슈 데이터 체계화 (사내 공식 플랫폼 채택)</li>
+                <li>원격 게임패드 기반 경로 취득 기능 구현 (업무 시간 1/3 단축)</li>
+                <li>로봇 서비스 현장 셋업, 경로 취득, 테스트, 사용자 교육 등 SOM 역할 수행</li>
+                <li>다양한 기술팀(엔지니어링, 자율주행, 플랫폼)과의 협업 경험 및 커뮤니케이션 역량 강화</li>
+                <li>(프론트엔드 개발 직무로 전환)</li>
+              </ul>
+            </div>
 
+            <div className="project">
+              <h4>초기 로봇 모니터링 및 운영 지원</h4>
+              <span className="time">
+                <time dateTime="2023-06">2023. 06.</time> - <time dateTime="2023-11">2023. 11.</time> (6개월)
+              </span>
               <h5>주요 업무</h5>
               <ul>
-                <li>Neubie-Go 플랫폼 프론트엔드 기능 고도화 및 안정화 기여</li>
-                <li>사용자 피드백 및 기획 변경에 따른 신규 기능 개발 및 기존 기능 유지보수</li>
-                <li>코드 리뷰, 리팩토링 등을 통한 코드 품질 개선 및 성능 최적화 작업 참여</li>
-                <li>차세대 개발 환경 구축을 위한 Nx 모노레포 환경 구성 학습 및 팀 내 기술 공유/스터디 참여</li>
+                <li>자율주행 로봇 실시간 모니터링 및 필요시 원격 제어</li>
+                <li>운영 중 발생하는 이슈 리포팅 및 데이터 기록</li>
+                <li>현장 운영 경험 축적 및 서비스 개선점 파악</li>
               </ul>
             </div>
           </div>
@@ -206,19 +200,6 @@ export default function ResumePage() {
               게임패드로 로봇 이슈 기록하기: 딸깍이 개발 과정
             </a>
           </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="section-divider">
-          <h2>자기소개</h2>
-          <p>
-            주도적인 문제 해결 능력과 Full-stack 개발 경험(Node.js, React)을 갖춘 프론트엔드 개발자입니다. 자율주행 로봇
-            회사에서 현장 운영 비효율 개선을 위해 '딸깍이' 툴을 직접 개발하여 사내 공식 플랫폼으로 채택되는 성과를
-            만들었으며, 애자일 환경에서의 실무 프로젝트 참여를 통해 협업과 개발 역량을 키웠습니다. 사용자 경험 개선에
-            기여하며 함께 성장하는 개발자가 되겠습니다.
-          </p>
-          <p>저의 협업 능력과 성과에 대한 동료들의 긍정적인 평가는 LinkedIn 프로필에서 확인하실 수 있습니다.</p>
         </div>
       </section>
       <section>

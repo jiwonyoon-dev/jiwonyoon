@@ -48,7 +48,7 @@ export default function ResumePage() {
             <strong>애자일 환경</strong>에서 협업 역량을 강화했습니다.
           </p>
           <p>
-            <strong>저의 협업 능력과 성과에 대한 동료들의 긍정적인 평가</strong>은
+            <strong>저의 협업 능력과 성과에 대한 동료들의 긍정적인 평가</strong>는
             <a href="https://www.linkedin.com/in/jiwonyoondev" target="_blank" rel="noopener noreferrer">
               LinkedIn 프로필
             </a>

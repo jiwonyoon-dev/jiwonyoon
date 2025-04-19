@@ -1,0 +1,122 @@
+/* ----------------- 공통 박스 ----------------- */
+.topBox,
+.bottomBox {
+    position: fixed;
+    width: 260px;
+    padding: 16px;
+    transform: translateX(-80%) scale(0.2);
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    color: #fff;
+    transition: all 0.6s ease;
+    opacity: 0.7;
+}
+
+.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ----------------- 위치 ----------------- */
+.topBox {
+    top: 16px;
+    left: 24px;
+}
+
+.bottomBox {
+    bottom: 16px;
+    left: 24px;
+}
+
+/* ----------------- 상단 박스: 경로 진행 ----------------- */
+.progressHeader {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.progressBar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progressFill {
+    height: 100%;
+    background: #00ba7c;
+}
+
+.progressText {
+    font-size: 12px;
+    color: #ccc;
+    text-align: right;
+}
+
+/* ----------------- 하단 박스: 로봇 상태 ----------------- */
+.robotHeader {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.robotModel {
+    height: 120px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.partList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+}
+
+.partItem {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.partItem.ok {
+    background: #00ba7c;
+}
+
+.partItem.warning {
+    background: #ffaa00;
+}
+
+.partItem.error {
+    background: #ff3b30;
+}
+
+@media (max-width: 1064px) {
+    .topBox {
+        right: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-150%) scale(0.2);
+        width: 90vw;
+        max-width: 320px;
+    }
+
+    .visible {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}

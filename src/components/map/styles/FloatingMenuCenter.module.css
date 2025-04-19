@@ -36,7 +36,6 @@
     transform: scale(1.05);
 }
 
-/* 화면 너비 1064px 이하일 때만 바닥 고정 */
 @media (max-width: 1064px) {
     .menu {
         top: auto;

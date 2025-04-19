@@ -16,7 +16,7 @@
     border: 1px solid var(--vision-border);
     border-radius: var(--vision-radius);
     box-shadow: 0 10px 30px var(--vision-shadow);
-    transform: translateX(-120%) scale(0.95);
+    transform: translateX(-100vw) scale(0.95);
     transform-origin: left center;
     transition:
             transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),

@@ -6,8 +6,8 @@ import '@/app/global.css'
 const GA_ID = 'G-YXSFQJP09V'
 
 export const metadata: Metadata = {
-  title: 'Jjwon Yoon | Frontend Developer',
-  description: 'Jjwon Yoon | Frontend Developer'
+  title: 'jiwonyoon',
+  description: 'jiwonyoon'
 }
 
 export default function RootLayout({

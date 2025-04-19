@@ -1,0 +1,56 @@
+.panel {
+    position: fixed;
+    top: 16px;
+    right: 40px;
+    width: 280px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    padding: 16px;
+    z-index: 1100;
+    opacity: 0;
+    transform: translateY(-20px) scale(0.2);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+}
+
+.panel.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+@media (max-width: 1064px) {
+    .panel {
+        top: 72px; /* FloatingMenu가 top: 16px 에 있으니 그 아래로 */
+        right: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-20px) scale(0.2);
+        width: 90vw;
+        max-width: 320px;
+    }
+
+    .panel.visible {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.body {
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

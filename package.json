@@ -13,12 +13,12 @@
     "next": "15.2.4",
     "normalize.css": "^8.0.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-map-gl": "^8.0.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/geojson": "^7946.0.16",
-    "@types/mapbox-gl": "^3.4.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

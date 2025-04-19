@@ -34,7 +34,10 @@ export default function ResumePage() {
   return (
     <div className="container">
       <section>
-        <h2>문제를 찾아 기술로 해결하는, <br/>주도적인 개발자 윤지원 입니다.</h2>
+        <h2>
+          문제를 찾아 기술로 해결하는, <br />
+          주도적인 개발자 윤지원 입니다.
+        </h2>
         <p>
           주도적인 문제 해결 능력과 Full-stack 개발 경험(Node.js, React)을 갖춘 프론트엔드 개발자입니다. 자율주행 로봇
           회사에서 현장 운영 비효율 개선을 위해 '딸깍이' 툴을 직접 개발하여 사내 공식 플랫폼으로 채택되는 성과를
@@ -148,6 +151,49 @@ export default function ResumePage() {
         <h2>프로젝트</h2>
         <div className="row">
           <div className="row-left">
+            <h3>지도 프로젝트</h3>
+          </div>
+          <div className="row-right">
+            <h4>경로 시각화 및 경로 생성</h4>
+            <span className="time">
+              <time dateTime="2025-04">2025. 04.</time> – 현재
+            </span>
+            <h5>개요</h5>
+            <p>
+              Mapbox GL을 활용해 미리 정의된 경로를 지도 위에 시각화하고, 차후 Geolocation API로 사용자 위치 기반 경로
+              생성 기능을 추가할 예정인 프로젝트입니다.
+            </p>
+            <h5>역할</h5>
+            <p>프론트엔드 기획·설계·개발 전반 (커스텀 훅, 컴포넌트, 타입 정의, 반응형 UI/애니메이션)</p>
+            <h5>주요 기능 및 구현</h5>
+            <ul>
+              <li>GeoJSON LineString 경로를 Mapbox Source/Layer로 렌더링</li>
+              <li>
+                <strong>usePathAnimation</strong> 훅: 경로 보간(interpolation)으로 마커 이동, 속도 기반 남은 거리 계산
+              </li>
+              <li>follow 모드: 마커 위치에 따라 카메라 자동 이동(flyTo)</li>
+              <li>반응형 UI: 모바일 하단 플로팅 메뉴</li>
+              <li>차후 기능: Geolocation API 연동해 실시간 사용자 위치 기반 경로 생성 로직 도입 예정</li>
+            </ul>
+            <h5>성과</h5>
+            <ul>
+              <li>재사용 가능한 훅/컴포넌트 구조로 유지보수성·확장성 대폭 향상</li>
+              <li>지도 기반 시각화로 사용자 경험(UX) 개선</li>
+            </ul>
+            <h5>사용 기술</h5>
+            <ul>
+              <li>Front‑end: React, Next.js, TypeScript</li>
+              <li>지도: Mapbox GL</li>
+            </ul>
+            <h5>관련 링크</h5>
+            <a href="https://jiwonyoon.dev/map" target="_blank" rel="noopener">
+              jiwonyoon.dev/map
+            </a>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="row-left">
             <h3>딸깍이</h3>
           </div>
           <div className="row-right">
@@ -196,10 +242,10 @@ export default function ResumePage() {
         <h2>연락처</h2>
         <ul>
           <li>
-            <a href="mailto:jetty8013@gamil.com">이메일</a>
+            <a href="mailto:jiwonyoon.dev@gamil.com">이메일</a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/jetty8013" target="_blank">
+            <a href="https://www.linkedin.com/in/jiwonyoondev" target="_blank">
               LinkedIn 프로필
             </a>
           </li>

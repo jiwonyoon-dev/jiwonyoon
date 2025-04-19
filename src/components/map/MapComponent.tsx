@@ -40,6 +40,7 @@ const MapComponent: React.FC<MapComponentProps> = ({ isRunning, setRemainingDist
         pitch: 45,
         bearing: 0
       }}
+      attributionControl={false}
       mapboxAccessToken={mapboxToken}
       style={{ width: '100%', height: '100%' }}
       mapStyle="mapbox://styles/mapbox/streets-v12">

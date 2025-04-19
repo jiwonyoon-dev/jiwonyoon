@@ -40,15 +40,16 @@ export default function ResumePage() {
             주도적인 개발자 윤지원입니다.
           </h2>
           <p>
-            빠른 템포의 개발 환경에 익숙하며, Next.js와 TypeScript 기반으로 문제 해결에 집중해 프론트엔드 프로젝트를
-            성공적으로 수행해왔습니다.
+            <strong>빠른 템포의 개발 환경에 익숙하며</strong>, <strong>Next.js와 TypeScript 기반으로</strong> 문제
+            해결에 집중해 프론트엔드 프로젝트를 성공적으로 수행해왔습니다.
           </p>
           <p>
-            자율주행 로봇 회사에서 이슈 리포터 서비스를 기획·개발해 사내 공식 플랫폼으로 채택되는 성과를 이루었고,
-            애자일 환경에서 협업 역량을 강화했습니다.
+            자율주행 로봇 회사에서 <strong>이슈 리포터 서비스를 기획·개발</strong>해 사내 공식 플랫폼으로 채택되는
+            성과를 이루었고,
+            <strong>애자일 환경</strong>에서 협업 역량을 강화했습니다.
           </p>
           <p>
-            저의 협업 능력과 성과에 대한 동료들의 긍정적인 평가는
+            <strong>저의 협업 능력과 성과에 대한 동료들의 긍정적인 평가</strong>은
             <a href="https://www.linkedin.com/in/jiwonyoondev" target="_blank" rel="noopener noreferrer">
               LinkedIn 프로필
             </a>
@@ -171,9 +172,9 @@ export default function ResumePage() {
               프론트엔드 기획·설계·개발 전반을 담당했습니다 (커스텀 훅, 컴포넌트, 타입 정의, 반응형 UI·애니메이션).
             </p>
             <p>
-              Mapbox GL로 미리 정의된 경로를 시각화하고, <strong>usePathAnimation</strong> 훅으로 마커
-              보간(interpolation)과 속도 기반 거리 계산을 구현했습니다. follow 모드를 통해 카메라 자동 이동을 지원하며,
-              모바일 반응형 UI를 적용했고, 차후 Geolocation API 연동을 계획 중입니다.
+              Mapbox GL로 미리 정의된 경로를 시각화하고, usePathAnimation 훅으로 마커 보간(interpolation)과 속도 기반
+              거리 계산을 구현했습니다. follow 모드를 통해 카메라 자동 이동을 지원하며, 모바일 반응형 UI를 적용했고,
+              차후 Geolocation API 연동을 계획 중입니다.
             </p>
             <p>
               주요 기술: React, Next.js, TypeScript, Mapbox GL

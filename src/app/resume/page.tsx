@@ -18,14 +18,13 @@ const SkillLevel = ({ level }: { level: number }) => {
   return <div>{stars}</div>
 }
 
-const SkillItem = ({ skill, level, description }: { skill: string; level: number; description: string }) => {
+const SkillItem = ({ skill, level }: { skill: string; level: number }) => {
   return (
     <div className="project">
       <div className="flex items-center">
         <h5 className="mr-4">{skill}</h5>
         <SkillLevel level={level} />
       </div>
-      <p className="leading-relaxed">{description}</p>
     </div>
   )
 }
@@ -60,32 +59,34 @@ export default function ResumePage() {
 
       <section>
         <h2>스킬</h2>
-        <div className="section-divider">
-          <SkillItem
-            skill="Problem Solving"
-            level={4}
-            description="현장 업무의 비효율을 스스로 발견하고 이슈 리포터 서비스라는 기술적 솔루션을 기획·구현·개선하여
-            팀 생산성을 높이고 사내 공식 플랫폼으로 채택되는 성과를 이끌어냈습니다. 6,000건 이상의 이슈를 체계적으로
-            관리하고 업무 시간을 대폭 단축했습니다."
-          />
-          <SkillItem
-            skill="TypeScript"
-            level={3}
-            description="Next.js 기반 실무 프로젝트에서 제네릭과 유틸리티 타입을 활용해 컴포넌트와 함수의 재사용성을
-            높이고 타입 안정성을 강화했습니다."
-          />
-          <SkillItem
-            skill="React"
-            level={3}
-            description="이슈 리포터 서비스 UI 개발 및 상태 관리를 Hooks로 수행했으며, 컴포넌트 라이프사이클 이해를
-            바탕으로 부수 효과를 효과적으로 관리했습니다. 또한 Next.js 프로젝트에서 Custom Hook과 컴포넌트 기반
-            기능(회원 관리 등)을 구현한 경험이 있습니다."
-          />
-          <SkillItem
-            skill="Next.js"
-            level={2}
-            description="회사 프로젝트에서 Next.js 기반 회원 관리 기능을 개발하며 페이지 기반 라우팅 환경을 경험했습니다."
-          />
+        <div className="section-divider grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="rounded-lg bg-white p-6 shadow">
+            <SkillItem skill="Problem Solving" level={4} />
+            <p>
+              현장 업무의 비효율을 스스로 발견하고 이슈 리포터 서비스라는 기술적 솔루션을 기획·구현·개선하여 팀 생산성을
+              높이고 사내 공식 플랫폼으로 채택되는 성과를 이끌어냈습니다. 6,000건 이상의 이슈를 체계적으로 관리하고 업무
+              시간을 대폭 단축했습니다.
+            </p>
+          </div>
+          <div className="rounded-lg bg-white p-6 shadow">
+            <SkillItem skill="Next.js" level={2} />
+            <p>회사 프로젝트에서 Next.js 기반 회원 관리 기능을 개발하며 페이지 기반 라우팅 환경을 경험했습니다.</p>
+          </div>
+          <div className="rounded-lg bg-white p-6 shadow">
+            <SkillItem skill="TypeScript" level={3} />
+            <p>
+              Next.js 기반 실무 프로젝트에서 제네릭과 유틸리티 타입을 활용해 컴포넌트와 함수의 재사용성을 높이고 타입
+              안정성을 강화했습니다.
+            </p>
+          </div>
+          <div className="rounded-lg bg-white p-6 shadow">
+            <SkillItem skill="React" level={3} />
+            <p>
+              이슈 리포터 서비스 UI 개발 및 상태 관리를 Hooks로 수행했으며, 컴포넌트 라이프사이클 이해를 바탕으로 부수
+              효과를 효과적으로 관리했습니다. 또한 Next.js 프로젝트에서 Custom Hook과 컴포넌트 기반 기능(회원 관리 등)을
+              구현한 경험이 있습니다.
+            </p>
+          </div>
         </div>
       </section>
 

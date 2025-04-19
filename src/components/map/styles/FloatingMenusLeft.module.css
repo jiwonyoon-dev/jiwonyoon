@@ -1,4 +1,4 @@
-/* ----------------- 공통 박스 ----------------- */
+
 .topBox,
 .bottomBox {
     position: fixed;
@@ -21,7 +21,6 @@
     transform: scale(1);
 }
 
-/* ----------------- 위치 ----------------- */
 .topBox {
     top: 16px;
     left: 24px;
@@ -32,7 +31,6 @@
     left: 24px;
 }
 
-/* ----------------- 상단 박스: 경로 진행 ----------------- */
 .progressHeader {
     font-size: 14px;
     font-weight: bold;
@@ -59,7 +57,6 @@
     text-align: right;
 }
 
-/* ----------------- 하단 박스: 로봇 상태 ----------------- */
 .robotHeader {
     font-size: 14px;
     font-weight: bold;

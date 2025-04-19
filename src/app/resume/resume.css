@@ -1,0 +1,136 @@
+@media screen and (max-width: 960px) {
+    html,
+    body {
+        font-size: 14px;
+    }
+}
+
+section {
+    padding: 0 2rem;
+}
+
+p {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    line-height: 1.4
+}
+
+a {
+    color: #007bff;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+}
+
+@media screen and (max-width: 960px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 4rem 0 2rem 0;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+h4 {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+@media screen and (max-width: 960px) {
+    h4 {
+        font-size: 1.5rem;
+    }
+}
+
+h5 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0;
+    color: #333333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+}
+
+ul > li {
+    position: relative;
+    padding: 0.2rem 0 0.2rem 1rem;
+}
+
+ul > li:before {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    content: "•";
+    color: #696969;
+}
+
+.container {
+    width: 100%;
+    max-width: 50rem;
+    margin: auto;
+}
+
+.section-divider {
+    padding: 3rem 0;
+    border-bottom: 1px solid #eeeeee;
+}
+.row {
+    display: flex;
+    padding: 3rem 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.row-left {
+    flex-basis: 13rem;
+    padding-right: 1rem;
+    flex-shrink: 0;
+}
+
+.row-right {
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 960px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .row-left {
+        flex-basis: 100%;
+        padding-right: 0;
+        padding-bottom: 1rem;
+    }
+}
+
+.role {
+    display: block;
+}
+
+.project {
+    padding: 1.5rem 0;
+}
+
+.project:first-child {
+    padding-top: 0;
+}
+
+.time {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+

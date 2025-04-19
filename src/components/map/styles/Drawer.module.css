@@ -1,0 +1,82 @@
+.panel {
+    --vision-bg:  rgba(0, 0, 0, 0.4);;
+    --vision-border: rgba(255 255 255 / 0.2);
+    --vision-shadow: rgba(0 0 0 / 0.15);
+    --vision-radius: 16px;
+    --vision-blur: 20px;
+
+    position: fixed;
+    top: 16px;
+    left: 5%;
+    height: 80vh;
+    width: 280px;
+    background: var(--vision-bg);
+    backdrop-filter: blur(var(--vision-blur));
+    -webkit-backdrop-filter: blur(var(--vision-blur));
+    border: 1px solid var(--vision-border);
+    border-radius: var(--vision-radius);
+    box-shadow: 0 10px 30px var(--vision-shadow);
+    transform: translateX(-120%) scale(0.95);
+    transform-origin: left center;
+    transition:
+            transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+            background 0.3s ease;
+    padding: 1rem;
+    box-sizing: border-box;
+    z-index: 2000;
+}
+
+/* 열림 상태 */
+.panelOpen {
+    transform: translateX(0) scale(1);
+}
+
+/* 백드롭은 살짝 어둡게 */
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0 0 0 / 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 40;
+}
+.backdropOpen {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 메뉴 리스트 & 버튼 */
+.menuList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menuItem {
+    margin-bottom: 0.5rem;
+}
+.menuButton {
+    all: unset;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.menuButton:hover {
+    background: rgba(255 255 255 / 0.1);
+}
+.menuButton:active {
+    background: rgba(255 255 255 / 0.2);
+}
+
+.divider {
+    height: 1px;
+    background: rgba(255 255 255 / 0.2);
+    margin: 1rem 0;
+}

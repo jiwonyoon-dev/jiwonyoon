@@ -16,6 +16,7 @@ export default function MapPage() {
   const [follow, setFollow] = useState(true)
 
   const onToggleFollow = () => setFollow((prev) => !prev)
+  const onToggleRunning = () => setIsRunning((prev) => !prev)
 
   const handleDistanceUpdate: OnDistanceUpdate = (distance) => {
     setRemainingDistance(distance)
@@ -30,9 +31,8 @@ export default function MapPage() {
       <MapComponent isRunning={isRunning} setRemainingDistance={handleDistanceUpdate} follow={follow} />
       <FloatingMenuCenter
         isRunning={isRunning}
-        onStart={() => setIsRunning(true)}
-        onPause={() => setIsRunning(false)}
         follow={follow}
+        onToggleRunning={onToggleRunning}
         onToggleFollow={onToggleFollow}
       />
       <LeftTopProgress isRunning={isRunning} total={totalDistance} remaining={remainingDistance} />

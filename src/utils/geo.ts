@@ -1,14 +1,14 @@
 // src/utils/geo.ts
 
-// ——————————————————————————————————————————
-// 타입 & 상수
-// ——————————————————————————————————————————
 export type LatLng = [number, number]
+
+export interface Position {
+  latitude: number
+  longitude: number
+}
+
 const RADIUS_EARTH = 6_371_000 // 지구 반지름 (m)
 
-// ——————————————————————————————————————————
-// 좌표 데이터
-// ——————————————————————————————————————————
 export const pathCoords: LatLng[] = [
   [127.0443732, 37.547901],
   [127.0443931, 37.5477552],
@@ -21,9 +21,6 @@ export const pathCoords: LatLng[] = [
   [127.043153, 37.5450269]
 ]
 
-// ——————————————————————————————————————————
-// 헬퍼 함수
-// ——————————————————————————————————————————
 /** 도(deg) → 라디안(rad) */
 export const toRad = (deg: number): number => (deg * Math.PI) / 180
 
@@ -40,6 +37,9 @@ export const getDistanceMeters = ([lon1, lat1]: LatLng, [lon2, lat2]: LatLng): n
 
   return RADIUS_EARTH * c
 }
+
+export const getDistance = (a: Position, b: Position): number =>
+  getDistanceMeters([a.longitude, a.latitude], [b.longitude, b.latitude])
 
 /** 전체 경로 총 거리(m) */
 export const calculateTotalDistance = (path: LatLng[] = pathCoords): number =>

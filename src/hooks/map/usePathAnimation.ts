@@ -1,5 +1,5 @@
 // hooks/usePathAnimation.ts
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, RefObject } from 'react'
 import { MapRef } from 'react-map-gl/mapbox'
 import { LatLng, getDistanceMeters, getBearing, calculateRemainingDistance } from '@/utils/geo'
 
@@ -11,7 +11,7 @@ export const usePathAnimation = (
   speedMps: number,
   isRunning: boolean,
   follow: boolean,
-  mapRef: React.RefObject<MapRef | null>,
+  mapRef: RefObject<MapRef | null>,
   onDistanceUpdate: OnDistanceUpdate
 ): LatLng => {
   const [markerPos, setMarkerPos] = useState<LatLng>(pathCoords[0])

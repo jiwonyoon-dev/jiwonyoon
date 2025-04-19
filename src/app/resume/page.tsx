@@ -34,215 +34,191 @@ export default function ResumePage() {
   return (
     <div className="container">
       <section>
-        <h2>
-          문제를 찾아 기술로 해결하는, <br />
-          주도적인 개발자 윤지원 입니다.
-        </h2>
-        <p>
-          주도적인 문제 해결 능력과 Full-stack 개발 경험(Node.js, React)을 갖춘 프론트엔드 개발자입니다. 자율주행 로봇
-          회사에서 현장 운영 비효율 개선을 위해 '딸깍이' 툴을 직접 개발하여 사내 공식 플랫폼으로 채택되는 성과를
-          만들었으며, 애자일 환경에서의 실무 프로젝트 참여를 통해 협업과 개발 역량을 키웠습니다. 사용자 경험 개선에
-          기여하며 함께 성장하는 개발자가 되겠습니다.
-        </p>
-        <p>저의 협업 능력과 성과에 대한 동료들의 긍정적인 평가는 LinkedIn 프로필에서 확인하실 수 있습니다.</p>
-      </section>
-      <section>
         <div className="section-divider">
-          <h3>프론트엔드 핵심 (Core Front-end)</h3>
+          <h2>
+            문제를 찾아 기술로 해결하는, <br />
+            주도적인 개발자 윤지원입니다.
+          </h2>
+          <p>
+            빠른 템포의 개발 환경에 익숙하며, Next.js와 TypeScript 기반으로 문제 해결에 집중해 프론트엔드 프로젝트를
+            성공적으로 수행해왔습니다.
+          </p>
+          <p>
+            자율주행 로봇 회사에서 이슈 리포터 서비스를 기획·개발해 사내 공식 플랫폼으로 채택되는 성과를 이루었고,
+            애자일 환경에서 협업 역량을 강화했습니다.
+          </p>
+          <p>
+            저의 협업 능력과 성과에 대한 동료들의 긍정적인 평가는
+            <a href="https://www.linkedin.com/in/jiwonyoondev" target="_blank" rel="noopener noreferrer">
+              LinkedIn 프로필
+            </a>
+            에서 확인하실 수 있습니다.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>스킬</h2>
+        <div className="section-divider">
           <SkillItem
             skill="Problem Solving"
             level={4}
-            description="현장 업무의 비효율성을 스스로 발견하고 '딸깍이'라는 기술적 솔루션을 기획부터 구현, 개선까지 주도하여 팀 전체의 생산성을 향상시키고 사내 공식 플랫폼으로 채택되는 성과를 이끌어냈습니다. (6,000+ 이슈 관리, 업무 시간 단축 기여)"
-          />
-          <SkillItem
-            skill="JavaScript"
-            level={3}
-            description="'딸깍이' 프로젝트의 클라이언트(Chrome Ext) 및 서버(Node.js) 핵심 로직 개발 전반에 활용하여 비동기 처리, DOM 조작 등을 독립적으로 수행했습니다."
+            description="현장 업무의 비효율을 스스로 발견하고 이슈 리포터 서비스라는 기술적 솔루션을 기획·구현·개선하여
+            팀 생산성을 높이고 사내 공식 플랫폼으로 채택되는 성과를 이끌어냈습니다. 6,000건 이상의 이슈를 체계적으로
+            관리하고 업무 시간을 대폭 단축했습니다."
           />
           <SkillItem
             skill="TypeScript"
             level={3}
-            description="회사 실무 프로젝트(Next.js 기반)에서 제네릭(Generics)과 유틸리티 타입(Utility Types)을 활용하여 컴포넌트 및 함수의 재사용성을 높이고 타입 안정성을 강화한 경험이 있습니다."
+            description="Next.js 기반 실무 프로젝트에서 제네릭과 유틸리티 타입을 활용해 컴포넌트와 함수의 재사용성을
+            높이고 타입 안정성을 강화했습니다."
           />
           <SkillItem
             skill="React"
             level={3}
-            description="'딸깍이' UI 개발 및 상태 관리 경험(Hooks 활용), 특히 컴포넌트 라이프사이클 이해를 바탕으로 부수 효과(side effect)를 효과적으로 관리한 경험이 있습니다. 실무 프로젝트 진행 시 Next.js 프로젝트 내 컴포넌트 기반 기능 구현(회원관리 등)에 활용했으며, Custom Hook 작성 경험도 있습니다."
+            description="이슈 리포터 서비스 UI 개발 및 상태 관리를 Hooks로 수행했으며, 컴포넌트 라이프사이클 이해를
+            바탕으로 부수 효과를 효과적으로 관리했습니다. 또한 Next.js 프로젝트에서 Custom Hook과 컴포넌트 기반
+            기능(회원 관리 등)을 구현한 경험이 있습니다."
           />
           <SkillItem
             skill="Next.js"
             level={2}
-            description="회사 프로젝트 참여 기간 중 Next.js 기반의 회사 프로젝트에 참여하여 페이지 기반 라우팅 환경에서 회원 관리 등 실제 서비스 기능 개발 경험이 있습니다."
+            description="회사 프로젝트에서 Next.js 기반 회원 관리 기능을 개발하며 페이지 기반 라우팅 환경을 경험했습니다."
           />
         </div>
       </section>
+
       <section>
         <h2>경력 사항</h2>
-        <div className="row">
-          <div className="row-left">
-            <h3>뉴빌리티</h3>
-            <span>
-              <time dateTime="2023-06">2023. 06.</time> - 현재
-            </span>
-          </div>
-          <div className="row-right">
-            <div className="project">
-              <h4>Platform Core Frontend</h4>
-              <span className="time">
-                <time dateTime="2025-03">2025. 03.</time> - 현재
-              </span>
+        <div className="section-divider">
+          <h3>뉴빌리티</h3>
+          <span className="time">
+            <time dateTime="2023-06">2023.06 – 현재</time>
+          </span>
+          <p>
+            뉴빌리티는 실내·외 자율주행 로봇 서비스 전문 스타트업으로, 카메라 기반 V‑SLAM과 AI 객체 인식 기술을 활용해
+            배달 및 순찰용 자율주행 로봇 ‘뉴비(NEUBIE)’를 개발·운영합니다.
+          </p>
+          <br />
+          <br />
 
-              <h5>주요 업무</h5>
-              <ul>
-                <li>Neubie-Go 플랫폼 프론트엔드 기능 고도화 및 안정화 기여</li>
-                <li>사용자 피드백 및 기획 변경에 따른 신규 기능 개발 및 기존 기능 유지보수</li>
-                <li>코드 리뷰, 리팩토링 등을 통한 코드 품질 개선 및 성능 최적화 작업 참여</li>
-                <li>차세대 개발 환경 구축을 위한 Nx 모노레포 환경 구성 학습 및 팀 내 기술 공유/스터디 참여</li>
-              </ul>
-            </div>
+          <h5>프론트엔드 개발</h5>
+          <span className="time">
+            <time dateTime="2025-03">2025.03 – 현재</time>
+            <br />
+            <time dateTime="2024-08">2024.08 – 2024.10</time> (3개월)
+          </span>
 
-            <div className="project">
-              <h4>Platform Core Frontend</h4>
-              <span className="time">
-                <time dateTime="2024-08">2024. 08.</time> - <time dateTime="2024-10">2024. 10.</time> (3개월)
-              </span>
-              <h5>주요 업무</h5>
-              <ul>
-                <li>Next.js, TypeScript 기반 Neubie-Go 플랫폼 프론트엔드 개발</li>
-                <li>회원 관리 및 무선 충전기 관리 등 주요 기능 UI 및 로직 구현</li>
-                <li>React Query 활용 서버 상태 관리 및 react-hook-form 기반 폼 개발</li>
-                <li>애자일(스프린트) 환경 내 개발, 코드 리뷰, 회고 참여</li>
-                <li>PO, 디자이너, 백엔드 개발자와 협업하여 기능 개선 및 요구사항 반영</li>
-              </ul>
-            </div>
+          <p>
+            프론트엔드 개발 직무는 플랫폼 UI/UX 구현, 상태 관리, API 연동 및 폼 개발을 담당하며, 뉴비고(로봇 관제·경로
+            관리)와 배달 플랫폼 뉴비오더(고객·점주용) 프론트엔드를 개발했습니다.
+          </p>
 
-            <div className="project">
-              <h4>로봇 서비스 운영 매니저</h4>
-              <span className="time">
-                <time dateTime="2023-12">2023. 12.</time> - <time dateTime="2024-07">2024. 07.</time> (8개월)
-              </span>
-              <h5>주요 업무 및 성과</h5>
-              <ul>
-                <li>수동 리포팅 비효율 개선 위해 '딸깍이' 기획 및 Full-stack 개발 주도 (React, Node.js 등)</li>
-                <li>'딸깍이' 적용 통한 팀 생산성 증대 및 6,000건+ 이슈 데이터 체계화 (사내 공식 플랫폼 채택)</li>
-                <li>원격 게임패드 기반 경로 취득 기능 구현 (업무 시간 1/3 단축)</li>
-                <li>로봇 서비스 현장 셋업, 경로 취득, 테스트, 사용자 교육 등 SOM 역할 수행</li>
-                <li>다양한 기술팀(엔지니어링, 자율주행, 플랫폼)과의 협업 경험 및 커뮤니케이션 역량 강화</li>
-                <li>(프론트엔드 개발 직무로 전환)</li>
-              </ul>
-            </div>
+          <p>
+            주로 Next.js, React, TypeScript를 사용하여 플랫폼 프론트엔드를 개발했으며, React Query로 서버 상태를
+            효율적으로 관리하고 react-hook-form으로 안정적인 폼을 구현했습니다. 또한 NX 기반 모노레포 환경을 구성할 수
+            있고, CI/CD 파이프라인을 설정해 배포 자동화를 구현할 수 있습니다.
+          </p>
 
-            <div className="project">
-              <h4>로봇 서비스 운영 지원</h4>
-              <span className="time">
-                <time dateTime="2023-06">2023. 06.</time> - <time dateTime="2023-11">2023. 11.</time> (6개월)
-              </span>
-              <h5>주요 업무</h5>
-              <ul>
-                <li>자율주행 로봇 실시간 모니터링 및 필요시 원격 제어</li>
-                <li>운영 중 발생하는 이슈 리포팅 및 데이터 기록</li>
-                <li>현장 운영 경험 축적 및 서비스 개선점 파악</li>
-              </ul>
-            </div>
-          </div>
+          <br />
+          <h5>로봇 서비스 운영 매니저</h5>
+
+          <span className="time">
+            <time dateTime="2023-12">2023.12 – 2024.07</time> (8개월)
+          </span>
+
+          <p>
+            로봇 서비스 운영 매니저는 자율주행 로봇의 현장 배치·운영 모니터링·경로 최적화·이슈 대응·사용자 교육을
+            총괄하는 직무입니다.
+          </p>
+
+          <p>
+            본래 운영 업무를 맡으며 현장 이슈를 직접 관리했으나, 반복되는 비효율을 해결하기 위해 React와 Node.js를
+            활용한 이슈 리포터 서비스 기획·개발을 주도했습니다. 이를 통해 6,000건 이상의 이슈 데이터를 체계화하고 팀
+            생산성을 크게 향상시켰습니다. 또한 다양한 기술팀과 협업하며 커뮤니케이션 역량을 강화하고, 해당 경험을
+            바탕으로 프론트엔드 개발 직무로 성공적으로 전환했습니다.
+          </p>
+          <br />
+
+          <h5>로봇 서비스 운영 지원</h5>
+          <span className="time">
+            <time dateTime="2023-06">2023.06 – 2023.11</time> (6개월)
+          </span>
+          <p>
+            로봇 서비스 운영 지원은 자율주행 로봇의 실시간 모니터링·원격 제어·이슈 리포팅·데이터 기록을 담당하는
+            역할입니다.
+          </p>
+
+          <p>
+            현장 운영 지원 역할로서 자율주행 로봇의 상태를 실시간으로 관찰하고 필요 시 원격으로 제어했으며, 발생한
+            이슈를 체계적으로 리포팅하고 데이터를 기록했습니다. 이렇게 축적된 현장 경험을 바탕으로 서비스 개선점을
+            도출하고, 관련 기술팀과 협업하여 운영 효율을 향상시키는 데 기여했습니다.
+          </p>
         </div>
       </section>
+
       <section>
         <h2>프로젝트</h2>
-        <div className="row">
-          <div className="row-left">
-            <h3>지도 프로젝트</h3>
-          </div>
-          <div className="row-right">
-            <h4>경로 시각화 및 경로 생성</h4>
+        <div className="section-divider">
+          {/* 지도 프로젝트 */}
+          <div className="project">
+            <h4>지도 프로젝트</h4>
+            <h5>경로 시각화 및 경로 생성</h5>
             <span className="time">
-              <time dateTime="2025-04">2025. 04.</time> – 현재
+              <time dateTime="2025-04">2025.04 – 현재</time>
             </span>
-            <h5>개요</h5>
-            <p>
-              Mapbox GL을 활용해 미리 정의된 경로를 지도 위에 시각화하고, 차후 Geolocation API로 사용자 위치 기반 경로
-              생성 기능을 추가할 예정인 프로젝트입니다.
+            <p className="role-desc">
+              프론트엔드 기획·설계·개발 전반을 담당했습니다 (커스텀 훅, 컴포넌트, 타입 정의, 반응형 UI·애니메이션).
             </p>
-            <h5>역할</h5>
-            <p>프론트엔드 기획·설계·개발 전반 (커스텀 훅, 컴포넌트, 타입 정의, 반응형 UI/애니메이션)</p>
-            <h5>주요 기능 및 구현</h5>
-            <ul>
-              <li>GeoJSON LineString 경로를 Mapbox Source/Layer로 렌더링</li>
-              <li>
-                <strong>usePathAnimation</strong> 훅: 경로 보간(interpolation)으로 마커 이동, 속도 기반 남은 거리 계산
-              </li>
-              <li>follow 모드: 마커 위치에 따라 카메라 자동 이동(flyTo)</li>
-              <li>반응형 UI: 모바일 하단 플로팅 메뉴</li>
-              <li>차후 기능: Geolocation API 연동해 실시간 사용자 위치 기반 경로 생성 로직 도입 예정</li>
-            </ul>
-            <h5>성과</h5>
-            <ul>
-              <li>재사용 가능한 훅/컴포넌트 구조로 유지보수성·확장성 대폭 향상</li>
-              <li>지도 기반 시각화로 사용자 경험(UX) 개선</li>
-            </ul>
-            <h5>사용 기술</h5>
-            <ul>
-              <li>Front‑end: React, Next.js, TypeScript</li>
-              <li>지도: Mapbox GL</li>
-            </ul>
-            <h5>관련 링크</h5>
-            <a href="https://jiwonyoon.dev/map" target="_blank" rel="noopener">
-              jiwonyoon.dev/map
-            </a>
+            <p>
+              Mapbox GL로 미리 정의된 경로를 시각화하고, <strong>usePathAnimation</strong> 훅으로 마커
+              보간(interpolation)과 속도 기반 거리 계산을 구현했습니다. follow 모드를 통해 카메라 자동 이동을 지원하며,
+              모바일 반응형 UI를 적용했고, 차후 Geolocation API 연동을 계획 중입니다.
+            </p>
+            <p>
+              주요 기술: React, Next.js, TypeScript, Mapbox GL
+              <br />
+              <br />
+              <a href="https://jiwonyoon.dev/map" target="_blank" rel="noopener">
+                jiwonyoon.dev/map
+              </a>
+            </p>
           </div>
-        </div>
 
-        <div className="row">
-          <div className="row-left">
-            <h3>딸깍이</h3>
-          </div>
-          <div className="row-right">
-            <h4>로봇 이슈 리포팅 및 관리 자동화 도구</h4>
+          {/* 이슈 리포터 서비스 */}
+          <div className="project">
+            <h4>이슈 리포터 서비스</h4>
+            <h5>로봇 이슈 리포팅 및 관리 자동화 도구</h5>
             <span className="time">
-              <time dateTime="2023-10">2023. 10.</time> - 현재 (재직 기간 중 약 1년 이상 개발 및 개선)
+              <time dateTime="2023-10">2023.10 – 2024.11</time>
             </span>
-            <h5>개요</h5>
-            <p>
-              자율주행 로봇 모니터링 시 수동 타이핑의 비효율과 위험성을 해결하기 위해 개발한 게임패드 기반 이슈 기록 및
-              리포팅 자동화 시스템
+            <p className="role-desc">
+              Full‑stack 기획·설계·개발 및 유지보수를 수행했습니다 (Front-end: Chrome Extension, React / Back-end:
+              Node.js).
             </p>
-            <h5>역할</h5>
-            <p>기획, 설계, Full-stack 개발 (Front-end: Chrome Extension, React / Back-end: Node.js) 및 유지보수</p>
-            <h5>주요 기능 및 구현</h5>
-            <ul>
-              <li>Chrome Extension 활용 기존 플랫폼 비침투적 기능 구현</li>
-              <li>WebSocket/XMLHttpRequest 데이터 가로채기 기반 실시간 로봇 상태 정보 수집</li>
-              <li>Gamepad API 연동, 버튼 클릭 시 타임스탬프 및 데이터 자동 기록 (Local Storage 활용)</li>
-              <li>React 기반 이슈 분류/코멘트 UI 개발 및 실시간 상태 반영</li>
-              <li>Node.js 서버: 데이터 처리, Google Sheets 연동(우선순위 관리), 서버 캐싱(성능 최적화)</li>
-              <li>Slack/Jira API 연동: 자동 알림 및 티켓 생성 통한 체계적 이슈 관리 및 협업 지원</li>
-            </ul>
-            <h5>성과</h5>
-            <ul>
-              <li>6,000건 이상의 이슈 데이터 체계화 및 관리</li>
-              <li>업무 시간 단축: 수동 리포팅 10분 → 자동화 후 1분</li>
-              <li>사내 공식 플랫폼으로 채택 및 팀 생산성 향상 기여</li>
-              <li>기술적 솔루션을 통한 팀 내 비효율 문제 해결 및 개선</li>
-            </ul>
-            <h5>사용 기술</h5>
-            <ul>
-              <li>Front-end: React, Chrome Extension API</li>
-              <li>Back-end: Node.js, Express.js</li>
-              <li>Database: Google Sheets API</li>
-              <li>협업 도구: Slack API, Jira API</li>
-            </ul>
-            <h5>관련 링크</h5>
-            <a href="https://jiwonbot.tistory.com/23" target="_blank">
-              게임패드로 로봇 이슈 기록하기: 딸깍이 개발 과정
-            </a>
+            <p>
+              게임패드 기반 이슈 기록·리포팅 자동화 시스템을 개발해 자율주행 로봇 모니터링의 수동 타이핑 비효율을
+              해소했습니다. WebSocket/XMLHttpRequest 가로채기로 실시간 상태를 수집하고, Gamepad API 연동 및 Slack/Jira
+              API 통합으로 이슈 관리 프로세스를 체계화했습니다.
+            </p>
+            <p>
+              주요 기술: React, Chrome Extension API, Node.js, Express.js, Google Sheets API, Slack API, Jira API
+              <br />
+              <br />
+              <a href="https://jiwonbot.tistory.com/23" target="_blank">
+                게임패드로 로봇 이슈 기록하기: 이슈 리포터 서비스 개발 과정
+              </a>
+            </p>
           </div>
         </div>
       </section>
+
       <section>
         <h2>연락처</h2>
+        <p>연락을 원하시면 아래의 방법으로 연락주세요.</p>
         <ul>
           <li>
-            <a href="mailto:jiwonyoon.dev@gamil.com">이메일</a>
+            <a href="mailto:jiwonyoon.dev@gmail.com">이메일</a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/jiwonyoondev" target="_blank">

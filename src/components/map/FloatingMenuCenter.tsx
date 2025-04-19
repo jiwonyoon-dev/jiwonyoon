@@ -8,12 +8,23 @@ interface FloatingMenuProps {
   follow: boolean
   onToggleRunning: () => void
   onToggleFollow: () => void
+  onToggleMenuOpen: () => void
 }
 
-const FloatingMenuCenter = ({ isRunning, onToggleRunning, follow, onToggleFollow }: FloatingMenuProps) => {
+const FloatingMenuCenter = ({
+  isRunning,
+  follow,
+  onToggleRunning,
+  onToggleFollow,
+  onToggleMenuOpen
+}: FloatingMenuProps) => {
   return (
     <>
       <div className={`${styles.menu} `}>
+        <button className={styles.button} onClick={onToggleMenuOpen}>
+          ☰ 메뉴
+        </button>
+
         <button className={styles.button} onClick={onToggleRunning}>
           {isRunning ? '⏸ 일시 정지' : '🚀 주행 시작'}
         </button>

@@ -1,71 +1,23 @@
 // hooks/usePathAnimation.ts
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, RefObject } from 'react'
 import { MapRef } from 'react-map-gl/mapbox'
+import { LatLng, getDistanceMeters, getBearing, calculateRemainingDistance } from '@/utils/geo'
 
-// ——————————————————
-// 타입 정의
-// ——————————————————
-export type LatLng = [number, number]
 export type PathCoords = LatLng[]
 export type OnDistanceUpdate = (remainingDistance: number) => void
 
-// ——————————————————
-// 상수 및 유틸 함수
-// ——————————————————
-const RADIUS_EARTH = 6_371_000
-
-const toRad = (deg: number): number => (deg * Math.PI) / 180
-
-const getDistanceMeters = (from: LatLng, to: LatLng): number => {
-  const φ1 = toRad(from[1])
-  const φ2 = toRad(to[1])
-  const Δφ = toRad(to[1] - from[1])
-  const Δλ = toRad(to[0] - from[0])
-
-  const a = Math.sin(Δφ / 2) ** 2 + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) ** 2
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
-
-  return RADIUS_EARTH * c
-}
-
-const getBearing = (from: LatLng, to: LatLng): number => {
-  const φ1 = toRad(from[1])
-  const φ2 = toRad(to[1])
-  const Δλ = toRad(to[0] - from[0])
-
-  const y = Math.sin(Δλ) * Math.cos(φ2)
-  const x = Math.cos(φ1) * Math.sin(φ2) - Math.sin(φ1) * Math.cos(φ2) * Math.cos(Δλ)
-  const θ = Math.atan2(y, x)
-
-  return ((θ * 180) / Math.PI + 360) % 360
-}
-
-const calculateRemainingDistance = (current: LatLng, path: PathCoords, index: number): number => {
-  let dist = 0
-  // 현재 위치에서 다음 포인트까지
-  dist += getDistanceMeters(current, path[index + 1])
-  // 그 이후 세그먼트 누적
-  for (let i = index + 1; i < path.length - 1; i++) {
-    dist += getDistanceMeters(path[i], path[i + 1])
-  }
-  return dist
-}
-
-// ——————————————————
-// usePathAnimation 훅
-// ——————————————————
 export const usePathAnimation = (
   pathCoords: PathCoords,
   speedMps: number,
   isRunning: boolean,
   follow: boolean,
-  mapRef: React.RefObject<MapRef | null>,
+  mapRef: RefObject<MapRef | null>,
   onDistanceUpdate: OnDistanceUpdate
 ): LatLng => {
   const [markerPos, setMarkerPos] = useState<LatLng>(pathCoords[0])
 
-  const segmentIndexRef = useRef<number>(0)
-  const segmentProgressRef = useRef<number>(0)
+  const segmentIndexRef = useRef(0)
+  const segmentProgressRef = useRef(0)
   const lastFrameTimeRef = useRef<number | null>(null)
   const animationFrameIdRef = useRef<number | null>(null)
 
@@ -81,7 +33,11 @@ export const usePathAnimation = (
 
     const animate = (time: number): void => {
       const idx = segmentIndexRef.current
-      if (idx >= pathCoords.length - 1) return
+
+      if (idx >= pathCoords.length - 1) {
+        onDistanceUpdate(0)
+        return
+      }
 
       if (lastFrameTimeRef.current === null) {
         lastFrameTimeRef.current = time
@@ -91,9 +47,9 @@ export const usePathAnimation = (
 
       const from = pathCoords[idx]
       const to = pathCoords[idx + 1]
+
       const segmentDistance = getDistanceMeters(from, to)
       const segmentDuration = segmentDistance / speedMps
-
       segmentProgressRef.current += deltaSec / segmentDuration
 
       let currentPos: LatLng
@@ -108,8 +64,8 @@ export const usePathAnimation = (
 
       setMarkerPos(currentPos)
 
-      const bearing = getBearing(from, to)
       if (follow && mapRef.current) {
+        const bearing = getBearing(from, to)
         mapRef.current.flyTo({
           center: currentPos,
           bearing,

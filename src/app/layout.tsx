@@ -1,12 +1,5 @@
-import localFont from 'next/font/local'
 import React from 'react'
 import '@/app/global.css'
-
-const pretendardFont = localFont({
-  src: '../../public/fonts/PretendardVariable.woff2',
-  preload: true,
-  display: 'swap'
-})
 
 export default function RootLayout({
   children
@@ -15,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${pretendardFont.className} antialiased`}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }

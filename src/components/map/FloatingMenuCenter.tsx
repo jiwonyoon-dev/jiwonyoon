@@ -4,18 +4,28 @@ import React from 'react'
 import styles from '@/components/map/styles/FloatingMenuCenter.module.css'
 
 interface FloatingMenuProps {
-  onStart: () => void
-  onPause: () => void
   isRunning?: boolean
   follow: boolean
+  onToggleRunning: () => void
   onToggleFollow: () => void
+  onToggleMenuOpen: () => void
 }
 
-const FloatingMenuCenter = ({ isRunning, onStart, onPause, follow, onToggleFollow }: FloatingMenuProps) => {
+const FloatingMenuCenter = ({
+  isRunning,
+  follow,
+  onToggleRunning,
+  onToggleFollow,
+  onToggleMenuOpen
+}: FloatingMenuProps) => {
   return (
     <>
       <div className={`${styles.menu} `}>
-        <button className={styles.button} onClick={isRunning ? onPause : onStart}>
+        <button className={styles.button} onClick={onToggleMenuOpen}>
+          ☰ 메뉴
+        </button>
+
+        <button className={styles.button} onClick={onToggleRunning}>
           {isRunning ? '⏸ 일시 정지' : '🚀 주행 시작'}
         </button>
         <button className={styles.button} onClick={onToggleFollow}>

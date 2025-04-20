@@ -1,9 +1,11 @@
 import React from 'react'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: '윤지원 이력서',
-  description: '프론트엔드 개발자 윤지원의 이력서 입니다.'
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: '윤지원 이력서',
+    description: '프론트엔드 개발자 윤지원의 이력서 입니다.'
+  }
 }
 
 const SkillLevel = ({ level }: { level: number }) => {
@@ -29,7 +31,13 @@ const SkillItem = ({ skill, level }: { skill: string; level: number }) => {
   )
 }
 
-export default function ResumePage({ searchParams }: { searchParams: { color?: string } }) {
+interface ResumePageProps {
+  searchParams?: {
+    color?: string
+  }
+}
+
+export default function ResumePage({ searchParams }: ResumePageProps) {
   const color = searchParams?.color ?? '222222'
   const titleColor = color.startsWith('#') ? color : `#${color}`
 

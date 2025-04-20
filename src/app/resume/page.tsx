@@ -1,12 +1,7 @@
-import React from 'react'
-import { Metadata } from 'next'
+'use client'
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: '윤지원 이력서',
-    description: '프론트엔드 개발자 윤지원의 이력서 입니다.'
-  }
-}
+import React from 'react'
+import { useSearchParams } from 'next/navigation'
 
 const SkillLevel = ({ level }: { level: number }) => {
   const stars = []
@@ -31,14 +26,9 @@ const SkillItem = ({ skill, level }: { skill: string; level: number }) => {
   )
 }
 
-interface ResumePageProps {
-  searchParams?: {
-    color?: string
-  }
-}
-
-export default function ResumePage({ searchParams }: ResumePageProps) {
-  const color = searchParams?.color ?? '222222'
+export default function ResumePage() {
+  const params = useSearchParams()
+  const color = params.get('color') ?? '222222'
   const titleColor = color.startsWith('#') ? color : `#${color}`
 
   return (

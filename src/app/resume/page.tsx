@@ -29,7 +29,7 @@ const SkillItem = ({ skill, level }: { skill: string; level: number }) => {
   )
 }
 
-export default function ResumePage({ searchParams }: { searchParams?: { color?: string } }) {
+export default function ResumePage({ searchParams }: { searchParams: { color?: string } }) {
   const color = searchParams?.color ?? '222222'
   const titleColor = color.startsWith('#') ? color : `#${color}`
 

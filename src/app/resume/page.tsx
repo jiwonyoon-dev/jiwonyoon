@@ -30,12 +30,13 @@ const SkillItem = ({ skill, level }: { skill: string; level: number }) => {
 }
 
 type ResumePageProps = {
-  searchParams: { color?: string }
+  searchParams: Record<string, string | string[] | undefined>
 }
 
 export default function ResumePage({ searchParams }: ResumePageProps) {
-  const color = searchParams.color || '#222222'
-  const titleColor = color.startsWith('#') ? color : `#${color}`
+  const rawColor = searchParams.color
+  const color = Array.isArray(rawColor) ? rawColor[0] : rawColor
+  const titleColor = color?.startsWith('#') ? color : `#${color || '222222'}`
 
   return (
     <div className="container">

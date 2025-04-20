@@ -1,10 +1,7 @@
-import React from 'react'
-import { Metadata } from 'next'
+'use client'
 
-export const metadata: Metadata = {
-  title: '윤지원 이력서',
-  description: '프론트엔드 개발자 윤지원의 이력서 입니다.'
-}
+import React, { Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 const SkillLevel = ({ level }: { level: number }) => {
   const stars = []
@@ -29,17 +26,21 @@ const SkillItem = ({ skill, level }: { skill: string; level: number }) => {
   )
 }
 
-export default function ResumePage() {
+function ResumeClient() {
+  const params = useSearchParams()
+  const color = params.get('color') ?? '222222'
+  const titleColor = color.startsWith('#') ? color : `#${color}`
+
   return (
     <div className="container">
       <section>
         <div className="section-divider">
           <h2>
             문제를 찾아 기술로 해결하는, <br />
-            주도적인 개발자 윤지원입니다.
+            주도적인 개발자 윤지원입니다<strong style={{ color: titleColor }}>.</strong>
           </h2>
           <p>
-            <strong>빠른 템포의 개발 환경에 익숙하며</strong>, <strong>Next.js와 TypeScript 기반으로</strong> 문제
+            <strong>빠른 템포의 개발 환경에 익숙하며,</strong> <strong>Next.js와 TypeScript 기반으로</strong> 문제
             해결에 집중해 프론트엔드 프로젝트를 성공적으로 수행해왔습니다.
           </p>
           <p>
@@ -104,7 +105,7 @@ export default function ResumePage() {
           <br />
           <br />
 
-          <h5>프론트엔드 개발</h5>
+          <h5 style={{ color: titleColor }}>프론트엔드 개발</h5>
           <span className="time">
             <time dateTime="2025-03">2025.03 – 현재</time>
             <br />
@@ -123,7 +124,7 @@ export default function ResumePage() {
           </p>
 
           <br />
-          <h5>로봇 서비스 운영 매니저</h5>
+          <h5 style={{ color: titleColor }}>로봇 서비스 운영 매니저</h5>
 
           <span className="time">
             <time dateTime="2023-12">2023.12 – 2024.07</time> (8개월)
@@ -142,7 +143,7 @@ export default function ResumePage() {
           </p>
           <br />
 
-          <h5>로봇 서비스 운영 지원</h5>
+          <h5 style={{ color: titleColor }}>로봇 서비스 운영 지원</h5>
           <span className="time">
             <time dateTime="2023-06">2023.06 – 2023.11</time> (6개월)
           </span>
@@ -162,10 +163,61 @@ export default function ResumePage() {
       <section>
         <h2>프로젝트</h2>
         <div className="section-divider">
+          {/* 학습 프로젝트 */}
+          <div className="project">
+            <h4>모바일 앱 데이터 연동 및 상태 관리 실습</h4>
+            <h5 style={{ color: titleColor }}>React Native + GraphQL + Relay + Zustand 상태 관리 학습 프로젝트</h5>
+            <span className="time">
+              <time dateTime="2025-04">2025.04</time>
+            </span>
+
+            <p className="role-desc">
+              GraphQL + Relay로 타입 안정성을 확보하고, Zustand를 통해 전역 상태를 간결하게 관리하는 구조를
+              실습했습니다.
+            </p>
+
+            <p>
+              <strong>학습 목표</strong>
+              <br />
+              - React Native CLI로 프로젝트 초기화 및 빌드 성공
+              <br />
+              - GraphQL & Relay 환경 설정 및 mock 쿼리 테스트
+              <br />- Zustand 상태 관리 도입 및 간단한 카운터 UI 구현
+            </p>
+
+            <p>
+              <strong>사용 기술</strong>
+              <br />
+              React Native CLI, TypeScript, GraphQL, Relay, Zustand
+            </p>
+
+            <p>
+              <strong>주요 구성</strong>
+              <br />
+              - TestQueryScreen.tsx에서 useLazyLoadQuery로 mock 데이터 출력
+              <br />
+              - TestCounterScreen.tsx에서 Zustand 상태관리 테스트
+              <br />
+              - schema.graphql / relay.config.json / babel 설정 포함
+              <br />- iOS / Android 시뮬레이터 정상 실행 확인
+            </p>
+
+            <p>
+              <strong>코드 및 결과물</strong>
+              <br />
+              <a
+                href="https://github.com/jiwonyoon-dev/rn-graphql-relay-zustand"
+                target="_blank"
+                rel="noopener noreferrer">
+                GitHub 레포지토리 보기
+              </a>
+            </p>
+          </div>
+
           {/* 지도 프로젝트 */}
           <div className="project">
-            <h4>지도 프로젝트</h4>
-            <h5>경로 시각화 및 경로 생성</h5>
+            <h4>경로 시각화 연습</h4>
+            <h5 style={{ color: titleColor }}>경로 시각화 및 경로 생성</h5>
             <span className="time">
               <time dateTime="2025-04">2025.04 – 현재</time>
             </span>
@@ -178,8 +230,14 @@ export default function ResumePage() {
               차후 Geolocation API 연동을 계획 중입니다.
             </p>
             <p>
-              주요 기술: React, Next.js, TypeScript, Mapbox GL
+              <strong>사용 기술</strong>
               <br />
+              React, Next.js, TypeScript, Mapbox GL
+              <br />
+              <br />
+            </p>
+            <p>
+              <strong>코드 및 결과물</strong>
               <br />
               <a href="https://jiwonyoon.dev/map" target="_blank" rel="noopener">
                 jiwonyoon.dev/map
@@ -190,7 +248,7 @@ export default function ResumePage() {
           {/* 이슈 리포터 서비스 */}
           <div className="project">
             <h4>이슈 리포터 서비스</h4>
-            <h5>로봇 이슈 리포팅 및 관리 자동화 도구</h5>
+            <h5 style={{ color: titleColor }}>로봇 이슈 리포팅 및 관리 자동화 도구</h5>
             <span className="time">
               <time dateTime="2023-10">2023.10 – 2024.11</time>
             </span>
@@ -204,8 +262,14 @@ export default function ResumePage() {
               API 통합으로 이슈 관리 프로세스를 체계화했습니다.
             </p>
             <p>
-              주요 기술: React, Chrome Extension API, Node.js, Express.js, Google Sheets API, Slack API, Jira API
+              <strong>사용 기술</strong>
               <br />
+              React, Chrome Extension API, Node.js, Express.js, Google Sheets API, Slack API, Jira API
+              <br />
+              <br />
+            </p>
+            <p>
+              <strong>블로그 글</strong>
               <br />
               <a href="https://jiwonbot.tistory.com/23" target="_blank">
                 게임패드로 로봇 이슈 기록하기: 이슈 리포터 서비스 개발 과정
@@ -217,7 +281,6 @@ export default function ResumePage() {
 
       <section>
         <h2>연락처</h2>
-        <p>연락을 원하시면 아래의 방법으로 연락주세요.</p>
         <ul>
           <li>
             <a href="mailto:jiwonyoon.dev@gmail.com">이메일</a>
@@ -230,5 +293,13 @@ export default function ResumePage() {
         </ul>
       </section>
     </div>
+  )
+}
+
+export default function ResumePage() {
+  return (
+    <Suspense fallback={<div>로딩 중...</div>}>
+      <ResumeClient />
+    </Suspense>
   )
 }

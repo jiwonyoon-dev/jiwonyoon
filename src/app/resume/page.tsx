@@ -29,17 +29,24 @@ const SkillItem = ({ skill, level }: { skill: string; level: number }) => {
   )
 }
 
-export default function ResumePage() {
+type ResumePageProps = {
+  searchParams: { color?: string }
+}
+
+export default function ResumePage({ searchParams }: ResumePageProps) {
+  const color = searchParams.color || '#222222'
+  const titleColor = color.startsWith('#') ? color : `#${color}`
+
   return (
     <div className="container">
       <section>
         <div className="section-divider">
           <h2>
             문제를 찾아 기술로 해결하는, <br />
-            주도적인 개발자 윤지원입니다.
+            주도적인 개발자 윤지원입니다<strong style={{ color: titleColor }}>.</strong>
           </h2>
           <p>
-            <strong>빠른 템포의 개발 환경에 익숙하며</strong>, <strong>Next.js와 TypeScript 기반으로</strong> 문제
+            <strong>빠른 템포의 개발 환경에 익숙하며,</strong> <strong>Next.js와 TypeScript 기반으로</strong> 문제
             해결에 집중해 프론트엔드 프로젝트를 성공적으로 수행해왔습니다.
           </p>
           <p>
@@ -104,7 +111,7 @@ export default function ResumePage() {
           <br />
           <br />
 
-          <h5>프론트엔드 개발</h5>
+          <h5 style={{ color: titleColor }}>프론트엔드 개발</h5>
           <span className="time">
             <time dateTime="2025-03">2025.03 – 현재</time>
             <br />
@@ -123,7 +130,7 @@ export default function ResumePage() {
           </p>
 
           <br />
-          <h5>로봇 서비스 운영 매니저</h5>
+          <h5 style={{ color: titleColor }}>로봇 서비스 운영 매니저</h5>
 
           <span className="time">
             <time dateTime="2023-12">2023.12 – 2024.07</time> (8개월)
@@ -142,7 +149,7 @@ export default function ResumePage() {
           </p>
           <br />
 
-          <h5>로봇 서비스 운영 지원</h5>
+          <h5 style={{ color: titleColor }}>로봇 서비스 운영 지원</h5>
           <span className="time">
             <time dateTime="2023-06">2023.06 – 2023.11</time> (6개월)
           </span>
@@ -165,7 +172,7 @@ export default function ResumePage() {
           {/* 지도 프로젝트 */}
           <div className="project">
             <h4>지도 프로젝트</h4>
-            <h5>경로 시각화 및 경로 생성</h5>
+            <h5 style={{ color: titleColor }}>경로 시각화 및 경로 생성</h5>
             <span className="time">
               <time dateTime="2025-04">2025.04 – 현재</time>
             </span>
@@ -190,7 +197,7 @@ export default function ResumePage() {
           {/* 이슈 리포터 서비스 */}
           <div className="project">
             <h4>이슈 리포터 서비스</h4>
-            <h5>로봇 이슈 리포팅 및 관리 자동화 도구</h5>
+            <h5 style={{ color: titleColor }}>로봇 이슈 리포팅 및 관리 자동화 도구</h5>
             <span className="time">
               <time dateTime="2023-10">2023.10 – 2024.11</time>
             </span>
